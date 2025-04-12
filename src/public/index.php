@@ -8,9 +8,23 @@
 </head>
 <body>
     
-    <div class="container">
-        <h1>Olá</h1>
+    <div class="container mt-5">
+    <form action="">
+        <div class="mb-3">
+            <label for="marca" class="form-label">Marca</label> 
+            <input name="marca" class="form-control" type="text"> <br>
+        </div>
+        
+        <div class="mb-3">
+            <label for="modelo" class="form-label">Modelo</label> 
+            <textarea name="modelo" class="form-control" type="text"> </textarea><br>
+        </div>
+
+        <button type="submit" class="btn btn-success">Cadastrar</button>
+    
+    </form>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
