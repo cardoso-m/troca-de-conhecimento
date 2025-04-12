@@ -14,11 +14,11 @@
       <form>
         <div class="mb-3">
           <label for="email" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+          <input name="email" type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
         </div>
         <div class="mb-3">
           <label for="senha" class="form-label">Senha</label>
-          <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+          <input name="senha" type="password" class="form-control" id="senha" placeholder="Digite sua senha">
         </div>
         <button type="submit" class="btn btn-primary w-100">Entrar</button>
         <div class="mt-3 text-center">
