@@ -11,18 +11,18 @@
   <div class="d-flex justify-content-center align-items-center vh-100">
     <div class="card p-4 shadow" style="width: 100%; max-width: 400px;">
       <h2 class="text-center mb-4">Sign-up</h2>
-      <form>
+      <form action="/troca-de-conhecimento/src/controller/userController.php" method="post">
       <div class="mb-3">
           <label for="nome" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="email" placeholder="Digite seu nome">
+          <input name="nome" type="text" class="form-control" id="nome" placeholder="Digite seu nome">
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">E-mail</label>
-          <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+          <input name="email" type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
         </div>
         <div class="mb-3">
           <label for="senha" class="form-label">Senha</label>
-          <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+          <input name="senha" type="password" class="form-control" id="senha" placeholder="Digite sua senha">
         </div>
         <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
         <div class="mt-3 text-center">
