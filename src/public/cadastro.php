@@ -69,10 +69,10 @@ if (!isset($_SESSION['usuario'])) {
                     </label>
                 </div>
             </div>
-            
+
             <div class="text-end mb-3">
-    <a href="../controller/logoutController.php" class="btn btn-outline-danger">Sair</a>
-</div>
+                <a href="../controller/logoutController.php" class="btn btn-outline-danger">Sair</a>
+            </div>
 
             <button type="submit" class="btn btn-success">Cadastrar</button>
         </form>
