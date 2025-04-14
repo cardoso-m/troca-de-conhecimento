@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario'])) {
+    header("Location: signin.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -60,6 +69,10 @@
                     </label>
                 </div>
             </div>
+            
+            <div class="text-end mb-3">
+    <a href="../controller/logoutController.php" class="btn btn-outline-danger">Sair</a>
+</div>
 
             <button type="submit" class="btn btn-success">Cadastrar</button>
         </form>
