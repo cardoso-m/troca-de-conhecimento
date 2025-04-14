@@ -2,6 +2,7 @@
 namespace generic;
 
 use PDO;
+use PDOException; 
 
 class MysqlSingleton{
     private static  $instance = null;
@@ -25,16 +26,30 @@ class MysqlSingleton{
         return self::$instance;
     }
 
-    public function executar($query,$param = array()){
-        if($this->conexao){
-            $sth = $this->conexao->prepare($query);
-            foreach($param as $k => $v){
-                $sth->bindValue($k,$v);
-               
+    public function executar($query, $param = array()) {
+        if($this->conexao) {
+            try {
+                $sth = $this->conexao->prepare($query);
+                
+                foreach($param as $k => $v) {
+                    $sth->bindValue($k, $v);
+                }
+                
+                $success = $sth->execute();
+                
+
+                if(stripos(trim($query), 'SELECT') === 0) {
+                    return $sth->fetchAll(PDO::FETCH_ASSOC);
+                }
+                else {
+                    return $success;
+                }
+            } catch(PDOException $e) {
+
+                error_log("Erro no banco de dados: " . $e->getMessage());
+                return false;
             }
-            
-            $sth->execute();
-            return $sth->fetchAll(PDO::FETCH_ASSOC);
         }
+        return false;
     }
 }
